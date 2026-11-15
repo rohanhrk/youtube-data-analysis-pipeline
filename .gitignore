@@ -1,0 +1,113 @@
+# =====================================================
+# Secrets & credentials  (NEVER commit these)
+# =====================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials
+credentials.json
+secrets.json
+secrets.yaml
+.aws/
+aws-credentials*
+config.local.*
+
+# =====================================================
+# Python
+# =====================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Testing / coverage / type checking
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# =====================================================
+# AWS Lambda / Glue build artifacts
+# =====================================================
+*.zip
+function.zip
+lambda_package/
+package/
+layer/
+python/lib/
+.aws-sam/
+.serverless/
+
+# Glue / Spark local artifacts
+spark-warehouse/
+metastore_db/
+derby.log
+
+# =====================================================
+# Infrastructure as Code (if you add it later)
+# =====================================================
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+crash.log
+cdk.out/
+cdk.context.json
+
+# =====================================================
+# Data  (large / licensed files stay out of Git)
+# =====================================================
+# Kaggle CSVs are large and have their own license - download them instead
+data/*.csv
+data/*.parquet
+*.parquet
+*.snappy
+# Keep the small category-mapping JSON files
+!data/*_category_id.json
+
+# Local scratch / sample output
+output/
+tmp/
+temp/
+*.log
+
+# =====================================================
+# IDE / Editor
+# =====================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =====================================================
+# OS files
+# =====================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =====================================================
+# IAM Permission
+# =====================================================
+iam_permissions/*.json
